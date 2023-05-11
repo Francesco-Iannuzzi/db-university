@@ -15,7 +15,7 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
 ## Entity name:
 - Department
 - Course
-- Subject
+- Degree
 - Teacher
 - Exam
 - Student
@@ -23,14 +23,14 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
 ## Tables name: 
 - departments
 - courses
-- subjects
+- deegres
 - teachers
 - exams
 - students
 
 ## Relationship
-- oneToMany: Departmens -> Courses / Courses -> Subjects / Subjects -> Teachers / Subject -> Exams
-- manyToMany: Students -> Exams 
+- oneToMany: Departmens -> Courses / Courses -> deegres / Degree -> Exams
+- manyToMany: Students -> Exams / deegres -> Teachers
 
 ## Table Columns: 
 
@@ -43,7 +43,7 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
 -level| VARCHAR(10), NULL
 
 
-### subjects
+### deegres
 -id| AUTO_INCREMENT, NOTNULL, PRIMARY_KEY, UNIQUE, INDEX, BIGINT
 -courses_id | NOTNULL, FOREIGN_KEY, UNIQUE, INDEX, BIGINT
 -name| VARCHAR(50), NOTNULL
@@ -52,7 +52,7 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
 
 ### teachers
 -id| AUTO_INCREMENT, NOTNULL, PRIMARY_KEY, UNIQUE, INDEX, BIGINT
--subjects_id|  NOTNULL, FOREIGN_KEY, UNIQUE, INDEX, BIGINT
+-deegres_id|  NOTNULL, FOREIGN_KEY, UNIQUE, INDEX, BIGINT
 -name| VARCHAR(22), NOTNULL
 -lastname| VARCHAR(23), NOTNULL
 -email| VARCHAR(40), NULL
@@ -62,7 +62,7 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
 
 ### exam
 -id| AUTO_INCREMENT, NOTNULL, PRIMARY_KEY, UNIQUE, INDEX, BIGINT
--subject_id| NOTNULL, FOREIGN_KEY, INDEX, BIGINT
+-degree| NOTNULL, FOREIGN_KEY, INDEX, BIGINT
 -student_id| NOTNULL, FOREIGN_KEY, INDEX, BIGINT
 -date| DATETIME
 -outcome| VARCHAR(10), NOTNULL
