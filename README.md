@@ -32,14 +32,16 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
 - exams
 - students
 
+
 ## Relationship
 - oneToMany: Departmens -> Courses / Courses -> Deegres / Degree -> Exams
 - manyToMany: Students -> Exams / Deegres -> Teachers
 
+
 ## Table Columns: 
 
 
-### Courses
+### courses
 - id| AUTO_INCREMENT, NOTNULL, PRIMARY_KEY, UNIQUE, INDEX, BIGINT
 - departments_id| NOTNULL, FOREIGN_KEY, UNIQUE, INDEX, BIGINT
 - name| VARCHAR(97), NOTNULL
@@ -64,13 +66,12 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
 - note| TEXT, NULL
 
 
-### exam
+### exams
 - id| AUTO_INCREMENT, NOTNULL, PRIMARY_KEY, UNIQUE, INDEX, BIGINT
-- degree| NOTNULL, FOREIGN_KEY, INDEX, BIGINT
-- student_id| NOTNULL, FOREIGN_KEY, INDEX, BIGINT
+- degree| FOREIGN_KEY, INDEX, BIGINT
+- student_id| FOREIGN_KEY, INDEX, BIGINT
 - date| DATETIME
 - outcome| VARCHAR(10), NOTNULL
-- vote| TINYINT, NOTNULL
 
 
 ### students
@@ -83,8 +84,9 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
 
 
 ### vote table pivot
-- exam_id| FOREIGN KEY, NULL
-- student_id | NOTNULL, FOREIGN_KEY, INDEX, BIGINT
+- exam_id| FOREIGN KEY
+- student_id | FOREIGN_KEY
+- vote / TINYINT NONULL
 
 <!-- 
 
