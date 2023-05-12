@@ -12,8 +12,9 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
 
 -->
 
-# DAY 1 (create a diagram Database)
 # Database University
+
+# DAY 1 (create a diagram Database)
 
 ## Entity name:
 - Department
@@ -32,8 +33,8 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
 - students
 
 ## Relationship
-- oneToMany: Departmens -> Courses / Courses -> deegres / Degree -> Exams
-- manyToMany: Students -> Exams / deegres -> Teachers
+- oneToMany: Departmens -> Courses / Courses -> Deegres / Degree -> Exams
+- manyToMany: Students -> Exams / Deegres -> Teachers
 
 ## Table Columns: 
 
