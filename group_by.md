@@ -32,3 +32,9 @@ SELECT COUNT(*) AS `total_degrees`, `departments`.`name` AS `department_name`
 FROM `degrees`
 JOIN `departments` ON `degrees`.`department_id` = `departments`.`id`
 GROUP BY `department_name`;
+
+or
+
+SELECT COUNT(*) AS `total_degrees`, `degrees`.`department_id` AS `department_id`
+FROM `degrees`
+GROUP BY `department_id`;
