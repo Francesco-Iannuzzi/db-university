@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="4sy09xNYOgmltlOT1sHQ" name="Page-1">
-        <mxGraphModel dx="1978" dy="1569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+        <mxGraphModel dx="1978" dy="1483" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -510,7 +510,7 @@
                 <mxCell id="160" value="exam_student" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
                     <mxGeometry x="520" y="590" width="200" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="161" value="- exams_id / FK &#10;- student_id / FK&#10;vote / NN" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="160" vertex="1">
+                <mxCell id="161" value="- exams_id / PK &#10;- student_id / PK&#10;vote / NN" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="160" vertex="1">
                     <mxGeometry y="30" width="200" height="90" as="geometry"/>
                 </mxCell>
                 <mxCell id="184" value="" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=none;exitX=1.01;exitY=0.14;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" parent="1" source="38" target="183" edge="1">
