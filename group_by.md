@@ -35,6 +35,6 @@ GROUP BY `department_name`;
 
 or
 
-SELECT COUNT(*) AS `total_degrees`, `degrees`.`department_id` AS `department_id`
+SELECT COUNT(*) AS `total_degrees`, `department_id`
 FROM `degrees`
 GROUP BY `department_id`;
